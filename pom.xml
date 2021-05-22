@@ -24,21 +24,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <release>11</release>
+        <release>8</release>
         <skipITs>true</skipITs>
 
         <version.groovy>3.0.7</version.groovy>
         <version.awssdk>2.15.79</version.awssdk>
         <version.assembly.plugin>3.1.1</version.assembly.plugin>
         <version.jackson>2.12.2</version.jackson>
-        <version.infinispan>12.1.1.Final</version.infinispan>
+        <version.infinispan>12.1.2.Final</version.infinispan>
         <version.spark>3.0.2</version.spark>
         <version.hadoop>3.2.0</version.hadoop>
+        <version.hudi>0.8.0</version.hudi>
         <version.log4j>2.14.1</version.log4j>
         <!-- Debezium -->
-        <version.debezium>1.5.0.Final</version.debezium>
+        <version.debezium>1.6.0.Beta1</version.debezium>
         <!-- Quarkus -->
-        <version.quarkus>1.13.3.Final</version.quarkus>
+        <version.quarkus>1.13.4.Final</version.quarkus>
         <version.parquet>1.10.1</version.parquet>
 
         <!-- Plugin versions -->

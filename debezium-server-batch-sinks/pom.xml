@@ -64,17 +64,28 @@
             <groupId>org.infinispan</groupId>
             <artifactId>infinispan-cachestore-rocksdb</artifactId>
         </dependency>
-
+        <!-- using hudi sink -->
+        <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-hive-bundle</artifactId>
+            <version>${version.parquet}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hudi</groupId>
+            <artifactId>hudi-spark3-bundle_2.12</artifactId>
+            <version>${version.hudi}</version>
+        </dependency>
         <!--        <dependency>-->
         <!--            <groupId>org.apache.logging.log4j</groupId>-->
         <!--            <artifactId>log4j-api</artifactId>-->
-        <!--            <version>2.14.1</version>-->
+        <!--            <version>${version.log4j}</version>-->
         <!--        </dependency>-->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${version.log4j}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.jboss.logmanager</groupId>-->
+        <!--            <artifactId>jboss-logmanager-embedded</artifactId>-->
+        <!--            <version>1.0.9</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.jboss.logmanager</groupId>
             <artifactId>log4j-jboss-logmanager</artifactId>

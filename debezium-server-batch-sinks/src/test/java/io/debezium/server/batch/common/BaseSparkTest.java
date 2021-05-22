@@ -40,6 +40,8 @@ public class BaseSparkTest {
   String objectKeyPrefix;
   @ConfigProperty(name = "debezium.sink.sparkbatch.bucket-name", defaultValue = "")
   String bucket;
+  @ConfigProperty(name = "debezium.sink.sparkhudibatch.table-database", defaultValue = "default")
+  String namespace;
 
   static {
     Testing.Files.delete(ConfigSource.OFFSET_STORE_PATH);
@@ -64,6 +66,11 @@ public class BaseSparkTest {
         .withColumn("input_file", functions.input_file_name());
   }
 
+  public Dataset<Row> getHudiTableData(String table) {
+    return spark.newSession().read()
+        .format("hudi")
+        .load(bucket + "/" + namespace + "/" + (objectKeyPrefix + table).replace(".", "_").replace("-", "_"));
+  }
 
   public static void PGCreateTestDataTable() throws Exception {
     // create test table
